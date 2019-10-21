@@ -1,28 +1,64 @@
+
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Mid Q4</title>
-    <link href="style.css" rel="stylesheet" type="text/css">
-  </head>
-  <body>
-      <!-- Your site content here -->
-      <span id = 'Letter One'>Letter One</span>
-      <input id = 'start' type="text">
-    </div>
-    <div>
-      <span id = 'Letter Two'>Letter Two</span>
-      <input id = 'start' type="text">
-    </div>
-    <div>
-      <span id = 'Border Width (px)'>Border Width (px)</span>
-      <input id = 'start' type="text">
-      </div>
-      <div>
-    
+<head>
+	<title>Mid Q4</title>
+
+</head>
+<body>
+	<div style="float:left;width:30%">
+	<h3>Text Logo Maker</h3>
+		<div>
+			<span>Letter One</span>
+			<input id='one' type="text">
+		</div>
+		<div>
+			<span>Letter Two</span>
+			<input id='two' type="text">
+		</div>
+		<div>
+			<span>Border Width (px)</span>
+			<input id='border' type="number" value="">
+		</div>
+		<button id="RC">Rounded Corner</button>
+	</div>
+	<div style="float:left;width:30%">
+		<div id="output" style="text-align:center;height:100px;width:100px">
+		<span id="p1" style="font-size:50px"></span><sup><span id="p2" style="font-size:20px"></span></sup>
+		</div>
+		<button id="BG">Background</button>
+		<button id="BR">Border</button><br><br>
+		<button id="L1">Letter One</button>
+		<button id="L2">Letter Two</button>
+	</div>
+	<script>
+	
+	let one = document.getElementById('one');
+	let two = document.getElementById('two');
+	let bor = document.getElementById('border');
+	let out = document.getElementById('output');
+	
+	let RC = document.getElementById('RC');
+	let BG = document.getElementById('BG');
+	let BR = document.getElementById('BR');
+	let L1 = document.getElementById('L1');
+	let L2 = document.getElementById('L2');
+	RC.addEventListener('click', function(){
+		out.style.borderRadius = '30px';
+	});
+	BR.addEventListener('click', function(){
+		out.style.border = bor.value+'px solid green';
+	});
+	L1.addEventListener('click', function(){
+		document.getElementById('p1').textContent = one.value;
+	});
+	L2.addEventListener('click', function(){
+		document.getElementById('p2').textContent = two.value;
+	});
+	
+	</script> 
 
 
 
-      <script src="jquery-3.3.1.min.js"></script>
-      <script src="script.js"></script>
-  </body>
+</body>
 </html>
